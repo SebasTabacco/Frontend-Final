@@ -1,0 +1,12 @@
+header {
+  background-image: url("/public/image/body/body0.avif");
+  /* Ruta de tu imagen */
+  background-size: cover;
+  /* Ajusta la imagen al tamaño del contenedor */
+  background-position: center;
+  /* Centra la imagen */
+  color: rgba(5, 245, 245, 0.911);
+  /* Coloca texto en blanco para que contraste con la imagen */
+  text-align: center;
+  padding: 20px;
+}

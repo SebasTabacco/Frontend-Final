@@ -1,0 +1,137 @@
+/* Contenedor general */
+.admin {
+  display: flex; /* Alinea elementos horizontalmente */
+  align-items: center; /* Centra la imagen y texto verticalmente */
+  gap: 40px; /* Espaciado entre imagen y texto */
+  padding: 30px;
+  background-color: #24172b; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgb(6, 182, 226); /* Sombra elegante */
+  /*max-width: 1200px; /* Ancho máximo */
+  margin: 90px auto; /* Centrado horizontal */
+}
+
+/* Imagen de Administración */
+.admin img {
+  max-width: 60%; /* Imagen ocupa 40% del ancho */
+  width: 100%;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(83, 31, 99, 0.301); /* Sombra */
+}
+
+/* Contenedor de texto */
+.admin .titulo {
+  font-size: 1.8em; /* Tamaño del título */
+  color: #d919eb; /* Color personalizado */
+  margin: 0; /* Elimina márgenes adicionales */
+  text-align: left; /* Alineación hacia la izquierda */
+}
+
+.admin .descripcion {
+  font-size: 1.5em; /* Tamaño del texto descriptivo */
+  color: #c6e6eb; /* Color personalizado */
+  line-height: 1.5; /* Mejora la legibilidad */
+  text-align: left; /* Alinea el texto debajo del título */
+  margin-top: 10px; /* Espaciado superior con el título */
+}
+
+@media (max-width: 768px) {
+  .admin {
+    flex-direction: column; /* Apila la imagen y el texto verticalmente */
+    text-align: center; /* Centra el contenido */
+  }
+
+  .admin img {
+    max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+  }
+
+  .titulo,
+  .descripcion {
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+}
+
+/* Contenedor principal */
+.staff-container {
+  display: grid; /* Utiliza grid para organizar los contenedores */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en cada fila */
+  gap: 40px; /* Espaciado entre contenedores */
+  padding: 10px;
+  background-color: #24172b; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor individual de cada miembro */
+.staff-member {
+  background-color: #fff; /* Fondo blanco */
+  text-align: center; /* Centra el contenido */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(6, 175, 226, 0.945); /* Sombra elegante */
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+}
+
+.staff-member:hover {
+  transform: scale(1.05); /* Efecto de aumento en hover */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2); /* Sombra más intensa */
+}
+
+/* Imagen del miembro */
+.staff-member img {
+  width: 300px; /* La imagen ocupa todo el ancho del contenedor */
+  height: 200px; /* Altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  margin-bottom: 10px; /* Espaciado debajo de la imagen */
+}
+
+/* Título del miembro */
+.staff-member h3 {
+  font-size: 1.2em; /* Tamaño del título */
+  color: #190ccf; /* Color oscuro */
+  margin-bottom: 5px; /* Espaciado entre el título y la descripción */
+}
+
+/* Descripción del miembro */
+.staff-member p {
+  font-size: 0.9em; /* Tamaño de la descripción */
+  color: #555; /* Gris suave */
+  margin: 0; /* Elimina márgenes adicionales */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .staff-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en cada fila */
+    gap: 15px; /* Reduce el espaciado entre contenedores */
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-container {
+    grid-template-columns: 1fr; /* 1 columna en cada fila */
+    gap: 10px; /* Reduce aún más el espaciado */
+  }
+}
+/* Contenedor centrado */
+.admin-2 {
+  display: flex; /* Habilita flexbox para centrar contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  min-height: 300px; /* Altura mínima del contenedor */
+  background-color: #12645d2c; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(172, 2, 187, 0.74); /* Sombra suave */
+  margin: 50px auto; /* Centra horizontalmente el contenedor en la página */
+  /*max-width: 600px; /* Ancho máximo del contenedor */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Imagen dentro del contenedor */
+.admin-2 img {
+  width: 70%; /* Imagen ocupa todo el ancho del contenedor */
+  /*max-width: 370px; /* Tamaño máximo de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgb(1, 205, 219); /* Sombra elegante para la imagen */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}

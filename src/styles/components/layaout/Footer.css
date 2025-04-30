@@ -1,0 +1,49 @@
+/*footer {
+  background-color: #ccc;
+  clear: both;
+  color: magenta;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 90%; 
+}*/
+/* ===== Footer Principal ===== */
+.footer {
+  background-color: #333; /* Fondo oscuro */
+  color: rgb(13, 231, 220); /* Texto en blanco */
+  text-align: center; /* Centra el contenido */
+  padding: 17px; /* Espaciado interno */
+  margin-top: 20px; /* Espaciado superior */
+  border-top: 3px solid #555; /* Línea superior */
+}
+
+/* ===== Título ===== */
+.footer h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* ===== Iconos de Redes Sociales ===== */
+.footer .social-icons {
+  display: flex; /* Activa flexbox */
+  justify-content: center; /* Centra horizontalmente los iconos */
+  gap: 20px; /* Espaciado entre los iconos */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.footer .social-icons a {
+  color: rgb(222, 3, 230); /* Iconos en blanco */
+  font-size: 1.8em; /* Tamaño de los iconos */
+  transition: transform 0.3s ease, color 0.3s ease; /* Efecto de transición */
+}
+
+.footer .social-icons a:hover {
+  color: #00bcd4; /* Cambia el color al pasar el cursor */
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+/* ===== Texto de Derechos Reservados ===== */
+.footer p {
+  font-size: 0.9em;
+  margin-top: 15px; /* Espaciado superior */
+  color: #0df8f8; /* Gris claro */
+}

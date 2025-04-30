@@ -1,0 +1,231 @@
+/* ===== Contenedor principal ===== */
+.principal {
+  display: flex; /* Habilita flexbox para organizar los elementos */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  padding: 30px; /* Espaciado interno */
+  background-color: rgb(31, 15, 31); /* Fondo claro */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 5px 8px 16px 5px rgba(20, 181, 202, 0.815); /* Sombra elegante */
+  max-width: 90%; /* Ancho máximo del contenedor */
+  margin: 50px auto; /* Centrado horizontal y espaciado superior/inferior */
+}
+
+/* ===== Imagen ===== */
+.principal img {
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  max-width: 600px; /* Tamaño máximo de la imagen */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  margin-bottom: 15px; /* Espaciado entre la imagen y el título */
+}
+
+/* ===== Título principal ===== */
+.principal h2 {
+  font-size: 2em; /* Tamaño del título principal */
+  color: #bd29cad5; /* Color oscuro para el texto */
+  margin: 10px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centra el título */
+}
+
+/* ===== Subtítulo ===== */
+.principal h3 {
+  font-size: 1.5em; /* Tamaño del subtítulo */
+  color: #11886a; /* Color más suave que el título principal */
+  margin: 10px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centra el subtítulo */
+}
+
+/* ===== Texto descriptivo ===== */
+.principal p {
+  font-size: 2em; /* Tamaño del texto descriptivo */
+  color: #cfdda9; /* Gris suave para el texto */
+  line-height: 1.6; /* Mejora la legibilidad */
+  text-align: justify; /* Justifica el texto para una apariencia profesional */
+  margin: 15px 0; /* Espaciado superior e inferior */
+}
+
+.principal hr {
+  width: 80%; /* Reduce el ancho de la línea horizontal */
+  margin: 20px auto; /* Centra la línea horizontal */
+  border: none; /* Elimina bordes estándar */
+  border-top: 2px solid #ccc; /* Línea superior con color personalizado */
+}
+
+@media (max-width: 768px) {
+  .info {
+    padding: 15px; /* Reduce el espaciado interno */
+  }
+
+  .principal img {
+    max-width: 100%; /* Imagen ocupa el ancho completo */
+    height: auto; /* Altura automática para mantener proporciones */
+  }
+
+  .principal h2 {
+    font-size: 1.8em; /* Ajusta el tamaño del título principal */
+  }
+
+  .principal h3 {
+    font-size: 1.2em; /* Ajusta el tamaño del subtítulo */
+  }
+
+  .principal p {
+    font-size: 0.9em; /* Texto más pequeño para pantallas compactas */
+  }
+}
+
+@media (max-width: 480px) {
+  .principal h2 {
+    font-size: 1.5em; /* Título principal más pequeño */
+  }
+
+  .principal h3 {
+    font-size: 1em; /* Subtítulo más pequeño */
+  }
+
+  .principal p {
+    font-size: 0.8em; /* Texto más compacto */
+  }
+}
+
+/* ===== Contenedor principal ===== */
+.home {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 20px auto; /* Centrado horizontal */
+  padding: 20px; /* Espaciado interno */
+  background-color: transparent; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 10px 4px 8px 3px rgba(99, 185, 1, 0.712); /* Sombra elegante */
+}
+
+/* ===== Carrusel ===== */
+.carousel img {
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  height: 600px; /* Altura fija para el carrusel */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+  box-shadow: 0 6px 12px rgba(29, 214, 190, 0.959); /* Sombra suave */
+}
+
+/* ===== Leyenda del carrusel ===== */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-caption h3 {
+  font-size: 1.5em;
+  color: #fff; /* Texto blanco */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto */
+}
+
+.carousel-caption p {
+  font-size: 1em;
+  color: #ddd; /* Texto gris claro */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Responsividad ===== */
+@media (max-width: 768px) {
+  .carousel img {
+    height: 250px; /* Reduce la altura del carrusel para pantallas pequeñas */
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2em; /* Ajusta el tamaño del título */
+  }
+
+  .carousel-caption p {
+    font-size: 0.9em; /* Ajusta el tamaño de la descripción */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel img {
+    height: 200px; /* Altura más pequeña para pantallas muy pequeñas */
+  }
+
+  .carousel-caption {
+    padding: 10px; /* Reduce el espaciado interno */
+  }
+}
+/* ===== Contenedor de información ===== */
+.info {
+  display: flex; /* Utiliza flexbox para organizar la imagen, el título y el texto */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  background-color: #f9f9f9; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 20px; /* Espaciado superior para separarlo del carrusel */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 20px auto; /* Centrado horizontal */
+}
+
+/* Estilo para la imagen */
+.info img {
+  width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+  max-width: 600px; /* Tamaño máximo de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra elegante para la imagen */
+  margin-bottom: 15px; /* Espaciado entre la imagen y el texto */
+}
+
+/* Título dentro del contenedor */
+.info h3 {
+  font-size: 1.8em; /* Tamaño del título */
+  color: #333; /* Color oscuro */
+  text-align: center; /* Centra el título */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Texto descriptivo */
+.info p {
+  font-size: 1em; /* Tamaño del texto */
+  color: #555; /* Gris suave */
+  text-align: justify; /* Alinea el texto justificadamente */
+  line-height: 1.5; /* Mejora la legibilidad */
+  margin: 0; /* Elimina márgenes adicionales */
+}
+@media (max-width: 768px) {
+  .info {
+    max-width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    padding: 15px; /* Reduce el espaciado interno */
+  }
+
+  .info img {
+    max-width: 100%; /* La imagen se ajusta al ancho completo */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+
+  .info h3 {
+    font-size: 1.5em; /* Ajusta el tamaño del título */
+  }
+
+  .info p {
+    font-size: 0.9em; /* Reduce el tamaño del texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    padding: 10px; /* Ajusta el espaciado para pantallas pequeñas */
+  }
+
+  .info h3 {
+    font-size: 1.3em; /* Título más pequeño */
+  }
+
+  .info p {
+    font-size: 0.8em; /* Texto más pequeño */
+  }
+}
+/* Contenedor principal para dar espacio hacia abajo */
+.d-flex {
+  margin-block: 20px; /* Agrega un espacio de 20px hacia abajo */
+  margin-top: 20%;
+}

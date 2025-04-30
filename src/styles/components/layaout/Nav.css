@@ -1,0 +1,55 @@
+/* Estilos generales para el nav */
+nav {
+  background-color: rgb(48, 9, 53); /* Color de fondo */
+  /*color: white; /* Color de texto */
+  box-shadow: 0 4px 6px rgba(245, 66, 215, 0.445); /* Sombra elegante */
+  padding: 10px 20px;
+
+  position: sticky; /* Fijo en la parte superior al hacer scroll */
+  top: 0;
+  z-index: 1000; /* Evita que otros elementos lo cubran */
+}
+
+/* Contenedor del contenido del nav */
+nav div {
+  max-width: 1200px; /* Limita el ancho máximo del nav */
+  margin: 0 auto; /* Centra el nav */
+  display: flex; /* Flexbox para organizar elementos */
+  justify-content: space-between; /* Espacio entre enlaces */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para la lista dentro del nav */
+nav ul {
+  list-style: none; /* Elimina puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox para alinear horizontalmente */
+  gap: 20px; /* Espacio entre cada enlace */
+}
+
+/* Enlaces */
+nav li a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: rgb(24, 218, 201); /* Color del texto */
+  font-size: 1em; /* Tamaño del texto */
+  font-weight: bold; /* Negrita para destacar */
+  transition: color 0.3s; /* Animación suave en hover */
+}
+
+nav li a:hover {
+  color: #e51bec; /* Cambia a un color atractivo al pasar el ratón */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Cambia a vertical en pantallas pequeñas */
+    gap: 10px; /* Reduce el espacio entre los enlaces */
+  }
+
+  nav {
+    text-align: center; /* Centra el contenido en móviles */
+    padding: 15px;
+  }
+}

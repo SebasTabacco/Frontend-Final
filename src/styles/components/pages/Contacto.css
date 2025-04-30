@@ -1,0 +1,182 @@
+/* Estilo global */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f7fc8a;
+  /* Fondo claro */
+  color: #e63bc9;
+  /* Texto oscuro */
+}
+
+/* ===== Estilos para el formulario ===== */
+.form-container {
+  background-color: #330335;
+  padding: 30px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(28, 228, 201, 0.986); /* Sombra elegante */
+  max-width: 800px;
+  margin: 40px auto; /* Centra el formulario */
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #05e9de; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animación al interactuar */
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #d8db04a4; /* Azul en foco */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto brillante en foco */
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #587506; /* Azul moderno */
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+/* ===== Espaciado de filas y columnas ===== */
+.row {
+  display: flex;
+  gap: 20px; /* Espacio entre columnas */
+}
+
+.col {
+  flex: 1;
+}
+
+/* ===== Ajustes responsivos para el formulario ===== */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Cambia las columnas a filas en pantallas pequeñas */
+    gap: 10px;
+  }
+
+  .form-container {
+    padding: 20px; /* Reduce el padding para pantallas pequeñas */
+  }
+}
+
+/* ===== Estilos para el mapa ===== */
+.map-container {
+  margin-top: 40px; /* Espaciado entre el formulario y el mapa */
+  text-align: center;
+}
+
+.map-container h2 {
+  font-size: 1.5em;
+  color: #007bff; /* Azul profesional */
+  margin-bottom: 20px;
+}
+
+.map-container iframe {
+  max-width: 800px; /* Ajusta el tamaño del mapa */
+  width: 100%;
+  border-radius: 10px; /* Bordes redondeados para estilo moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+/* ===== Estilos para la sección de datos útiles ===== */
+.datos-utiles {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.datos-utiles h2 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Contenedores con efectos */
+.datos-contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
+  gap: 20px;
+  justify-content: center;
+}
+
+.datos-contenedor > div {
+  flex: 1;
+  min-width: 250px; /* Tamaño mínimo por columna */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+  text-align: left;
+  border: 3px solid transparent; /* Inicialmente sin borde visible */
+  animation: border-animation 3s infinite; /* Animación infinita de bordes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.datos-contenedor > div:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Sombra más intensa */
+}
+
+/* Animación de los bordes */
+@keyframes border-animation {
+  0% {
+    border-color: #1a6161;
+  }
+  25% {
+    border-color: #a327c9;
+  }
+  50% {
+    border-color: #cf9f0f;
+  }
+  75% {
+    border-color: #b9d80b;
+  }
+  100% {
+    border-color: #29ece3;
+  }
+}
+
+/* Íconos y texto */
+.datos-contenedor i {
+  font-size: 1.5em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.datos-contenedor p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.datos-contenedor ul {
+  padding: 0;
+  list-style: none;
+}
+
+.datos-contenedor ul li {
+  margin: 5px 0;
+}
+
+.datos-contenedor ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.datos-contenedor ul li a:hover {
+  text-decoration: underline;
+}
