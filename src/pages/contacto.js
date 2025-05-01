@@ -81,16 +81,16 @@ function Contacto() {
             <i className="fas fa-phone"></i>
             <p><strong>Teléfonos Útiles:</strong></p>
             <ul>
-              <li><a href="tel:+541123456789">+54 11 2345 6789 (Central)</a></li>
-              <li><a href="tel:+541198765432">+54 11 9876 5432 (Emergencias)</a></li>
+              <li><a href="tel:+541123456789">+54 9 2664-860525 (Central)</a></li>
+              <li><a href="tel:+541198765432">+54 9 2664-860525 (Emergencias)</a></li>
             </ul>
           </div>
           <div>
             <i className="fas fa-envelope"></i>
             <p><strong>Correos Electrónicos:</strong></p>
             <ul>
-              <li><a href="mailto:contacto@empresa.com">contacto@empresa.com</a></li>
-              <li><a href="mailto:soporte@empresa.com">soporte@empresa.com</a></li>
+              <li><a href="mailto:contacto@empresa.com">nucleoweb@gmail.com</a></li>
+              <li><a href="mailto:soporte@empresa.com">nucleoweb@gmail.com</a></li>
             </ul>
           </div>
           <div>
