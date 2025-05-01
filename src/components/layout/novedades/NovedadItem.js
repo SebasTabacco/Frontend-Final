@@ -1,20 +1,21 @@
-//  eliminar si no las utilizo
-import NovedadItem from '../components/layout/novedades/NovedadItem';
-
-
 import React from 'react';
 
-var NovedadItem = (props) => {
-    var { diseño, valor_usd, opciones, imagen, body } = props;
+const NovedadItem = ({ novedad }) => {
     return (
-        <div className='novedades'>
-            <h2>{diseño}</h2>
-            <h2>{valor_usd}</h2>
-            <h2>{opciones}</h2>
-            <img src={imagen} />
-            <div dangerouslySetInnerHTML={{ _html: body }} />
+        <div className="col-md-4">
+            <div className="card">
+                <img src={novedad.imagen} alt={novedad.titulo} className="card-img-top" />
+                <div className="card-body">
+                    <h5 className="card-title">{novedad.titulo}</h5>
+                    <p className="card-text">Diseño: {novedad.diseño}</p>
+                    <p className="card-text">Valor USD: {novedad.valorUSD}</p>
+                    <p className="card-text">Opciones: {novedad.opciones}</p>
+                   
+                </div>
+            </div>
         </div>
     );
-}
+};
 
 export default NovedadItem;
+

@@ -1,19 +1,44 @@
+import React, { useEffect, useState } from 'react';
 
+const Novedades = () => {
+    const [novedades, setNovedades] = useState([]);
 
-import React from 'react';
+    useEffect(() => {
+        // Llamada a la API para obtener las novedades
+        fetch('http://localhost:3000/api/novedades')
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data); // Verifica los datos en consola
+                setNovedades(data);
+            })
+            .catch((error) => console.error('Error al cargar novedades:', error));
+    }, []);
 
-var Novedades = (props) => {
     return (
         <section className='holderNov'>
             <h2>Novedades</h2>
-            <h3>Diseño</h3>
-            <h3>Valor-USD</h3>
-            <h3>Opciones</h3>
-            <img src={imagen} alt="Imagen de novedad" />
-
-            <hr />
+            <div className="row">
+                {/* Aquí es donde debes poner el mapeo */}
+                {novedades.map((novedad) => (
+                    <div key={novedad.id} className="col-md-4">
+                        <div className="card">
+                            <img src={novedad.imagen} alt={novedad.titulo} className="card-img-top" />
+                            <div className="card-body">
+                                <h5 className="card-title">{novedad.titulo}</h5>
+                                <p className="card-text">Diseño: {novedad.diseno}</p>
+                                <p className="card-text">Valor USD: {novedad.valor_usd}</p>
+                                <p className="card-text">Opciones: {novedad.opciones}</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </section>
     );
-}
+};
 
 export default Novedades;
+
+
+
