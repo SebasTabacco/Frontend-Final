@@ -1,0 +1,109 @@
+.holderNov {
+  padding: 50px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* ✨ Efecto de entrada con animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 📌 Tarjetas con animación y efectos */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 350px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 📌 Imagen con efecto de zoom */
+.card-img-top {
+  border-radius: 10px;
+  max-height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.08);
+}
+
+/* 📌 Contenido mejorado */
+.card-body {
+  text-align: left;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f2027;
+  transition: color 0.3s ease-in-out;
+}
+
+.card-title:hover {
+  color: #05f5f5;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 5px rgba(233, 236, 45, 0.918);
+  }
+  25% {
+    box-shadow: 0 0 10px rgba(236, 183, 36, 0.863);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(65, 243, 49, 0.801);
+  }
+  75% {
+    box-shadow: 0 0 10px rgba(245, 41, 126, 0.952);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(5, 245, 245, 0.3);
+  }
+}
+
+/* 📌 Tarjetas con efecto de luz girando */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+  animation: glowingBorder 3s infinite;
+}
+
+/* 📌 Efecto al pasar el mouse */
+.card:hover {
+  transform: scale(1.05);
+  animation: glowingBorder 1.5s infinite;
+}

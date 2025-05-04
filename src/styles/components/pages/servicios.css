@@ -1,0 +1,97 @@
+.servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Fondo degradado */
+  color: white;
+  font-family: "Arial", sans-serif;
+  padding: 50px;
+}
+
+/* 📌 Estilos para el carrusel */
+.carousel-service {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.small-carousel {
+  width: 100%;
+}
+
+/* 📌 Estilos para los elementos del carrusel */
+.carousel-cont-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(5, 245, 245, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 255, 255, 0.3);
+  color: white;
+}
+
+/* 📌 Animación en los textos del carrusel */
+.carousel-cont-1 h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-cont-1:hover h2 {
+  transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* 📌 Estilos para el video */
+video {
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 255, 255, 0.3);
+  max-width: 800px; /* Aumenta el tamaño máximo */
+  width: 90%; /* Se adapta mejor a diferentes pantallas */
+  transition: transform 0.3s ease-in-out;
+}
+
+video:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+/*space*/
+.space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Espaciado alrededor de la imagen */
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Fondo degradado elegante */
+  border-radius: 15px; /* Bordes redondeados para darle suavidad */
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3); /* Sombra profesional */
+  margin: 30px auto; /* Margen para espaciar el bloque */
+  max-width: 90%;
+}
+
+.space img {
+  width: 100%;
+  max-width: 600px; /* Limita el tamaño sin afectar la calidad */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra suave para darle profundidad */
+  transition: transform 0.3s ease-in-out;
+}
+
+.space img:hover {
+  transform: scale(2.05); /* Efecto de zoom suave al pasar el mouse */
+}

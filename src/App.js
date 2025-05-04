@@ -1,7 +1,6 @@
 /*import React from 'react';*/
-
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 
 import './App.css';
 
@@ -19,9 +18,10 @@ import Staff from './pages/Staff';
 
 
 function App() {
+
   return (
     <div className='App'>
-      
+
       <Header />
       <BrowserRouter>
         <Nav />
@@ -30,13 +30,13 @@ function App() {
           <Route path='staff' element={<Staff />} />
           <Route path='Servicios' element={<Servicios />} />
           <Route path='Novedades' element={<Novedades />} />
-          <Route path='contacto'element={<Contacto/>}/>
+          <Route path='contacto' element={<Contacto />} />
         </Routes>
       </BrowserRouter>
       <div className='footer-container'>
-      <Footer />
+        <Footer />
       </div>
-      
+
     </div>
   );
 }

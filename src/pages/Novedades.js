@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import "../styles/components/pages/Novedades.css";
+
+
+
+
 
 const Novedades = () => {
     const [novedades, setNovedades] = useState([]);

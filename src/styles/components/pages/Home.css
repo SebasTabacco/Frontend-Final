@@ -12,13 +12,13 @@
   margin: 50px auto; /* Centrado horizontal y espaciado superior/inferior */
 }
 
-/* ===== Imagen ===== */
-.principal img {
-  width: 100%; /* La imagen ocupa todo el ancho disponible */
-  max-width: 600px; /* Tamaño máximo de la imagen */
-  border-radius: 10px; /* Bordes redondeados para la imagen */
+/* ===== video ===== */
+.principal video {
+  width: 100%; /* El video ocupa todo el ancho disponible */
+  max-width: 800px; /* Tamaño máximo del video */
+  border-radius: 10px; /* Bordes redondeados para el video */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra elegante */
-  margin-bottom: 15px; /* Espaciado entre la imagen y el título */
+  margin-bottom: 15px; /* Espaciado entre el video y el título */
 }
 
 /* ===== Título principal ===== */

@@ -10,7 +10,10 @@ function Home(props) {
     return (
         <main>
             <div className='principal'>
-                < img src='/image/novedades/info.png' alt='info' />
+            <video autoPlay loop muted playsInline>
+        <source src='/image/Logo-3D/intro.mp4' type='video/mp4' />
+        Tu navegador no soporta el elemento de video.
+    </video>
                 <h2>Núcleo Web: </h2>
                 <h3>Transformando Ideas en Realidad Digital</h3>
                 <p>En el corazón de la innovación tecnológica, nació Núcleo Web, una empresa dedicada a transformar ideas en realidades digitales,
@@ -37,12 +40,12 @@ function Home(props) {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="/image/logo/Logo1.png"
+                            src="/image/login/login2.png"
                             alt="Segunda imagen"
                         />
                         <Carousel.Caption>
-                            <h3>Diseños de Logos</h3>
-                            <p>Tambien Brindamos Diseños de Logos</p>
+                            <h3>Diseños de Login</h3>
+                            <p>Pagina Inicio con Login</p>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -63,7 +66,7 @@ function Home(props) {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="/image/body/body0.jpg"
+                            src="/image/Logo-3D/f2.jpeg"
                             alt="Cuarta imagen"
                         />
                         <Carousel.Caption>
