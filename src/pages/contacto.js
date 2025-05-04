@@ -1,64 +1,118 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import './../styles/components/pages/Contacto.css';
 
-
 function Contacto() {
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    comentario: "",
+    telefono: ""
+  });
+
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Datos enviados al backend:", formData);
+
+    try {
+      const response = await fetch("http://localhost:3000/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log("Respuesta del backend:", data);
+
+      if (response.ok) {
+        alert("¡Formulario enviado exitosamente!");
+        setFormData({ nombre: "", email: "", comentario: "", telefono: "" });
+      } else {
+        alert(`Error: ${data.message}`);
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      alert("Ocurrió un error. Intenta nuevamente.");
+    }
+  };
+
+
   return (
     <div className="form-container">
-    <Form>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control type="nombre" placeholder="Ingrese Nombre" />
+      <h1>Contacto</h1>
+      <p>Complete el formulario y nos pondremos en contacto con usted.</p>
+
+      <Form onSubmit={handleSubmit}>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridNombre">
+            <Form.Label>Nombre</Form.Label>
+            <Form.Control
+              type="text"
+              name="nombre"
+              placeholder="Ingrese Nombre"
+              value={formData.nombre}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Correo Electrónico</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Ingrese Correo"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+        </Row>
+
+        <Form.Group className="mb-3" controlId="formGridTelefono">
+          <Form.Label>Teléfono</Form.Label>
+          <Form.Control
+            type="text"
+            name="telefono"
+            placeholder="Ingrese Número"
+            value={formData.telefono}
+            onChange={handleChange}
+            required
+          />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Apellido</Form.Label>
-          <Form.Control type="apellido" placeholder="Ingrese Apellido" />
-        </Form.Group>
-      </Row>
-
-      <Form.Group className="mb-3" controlId="formGridAddress1">
-        <Form.Label>Localidad</Form.Label>
-        <Form.Control placeholder="Ingrese Localidad" />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Codigo Postal</Form.Label>
-        <Form.Control placeholder="C.D" />
-      </Form.Group>
-
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>Correo Electronico</Form.Label>
-          <Form.Control placeholder="Ingrese Correo"/>
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>Telefono</Form.Label>
-          <Form.Select placeholder="Ingrese Numero">
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridZip">
+        <Form.Group className="mb-3" controlId="formGridConsulta">
           <Form.Label>Consulta</Form.Label>
-          <Form.Control />
+          <Form.Control
+            type="text"
+            name="comentario"
+            placeholder="Ingrese su Consulta"
+            value={formData.comentario}
+            onChange={handleChange}
+            required
+          />
         </Form.Group>
-      </Row>
 
-      <Form.Group className="mb-3" id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+        <Button variant="primary" type="submit">
+          Enviar
+        </Button>
       </Form>
-      
+
+
+
+
       {/* Mapa de ubicación */}
       <div className="map-container">
         <h2>Ubicación</h2>
@@ -73,8 +127,9 @@ function Contacto() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-       {/* Datos útiles */}
-       <div className="datos-utiles">
+
+      {/* Datos útiles */}
+      <div className="datos-utiles">
         <h2>Datos Útiles</h2>
         <div className="datos-contenedor">
           <div>
@@ -110,7 +165,6 @@ function Contacto() {
         </div>
       </div>
     </div>
-      
   );
 }
 

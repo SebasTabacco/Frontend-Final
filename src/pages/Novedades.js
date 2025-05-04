@@ -4,14 +4,17 @@ const Novedades = () => {
     const [novedades, setNovedades] = useState([]);
 
     useEffect(() => {
-        // Llamada a la API para obtener las novedades
-        fetch('http://localhost:3000/api/novedades')
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data); // Verifica los datos en consola
-                setNovedades(data);
+        fetch("http://localhost:3000/api/novedades")
+            .then(res => res.json())
+            .then(data => {
+                console.log("Datos recibidos en frontend:", data); 
+                if (Array.isArray(data)) {
+                    setNovedades(data);
+                } else {
+                    console.error("Error: el backend no devolvió un array.");
+                }
             })
-            .catch((error) => console.error('Error al cargar novedades:', error));
+            .catch(error => console.error("Error al cargar novedades:", error));
     }, []);
 
     return (

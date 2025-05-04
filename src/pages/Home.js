@@ -1,10 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Carousel from 'react-bootstrap/Carousel'; // Importa el componente de Bootstrap
+import Carousel from 'react-bootstrap/Carousel';
 import Placeholder from 'react-bootstrap/Placeholder';
-import './../styles/components/pages/Home.css'; // Tu archivo CSS personalizado
+import './../styles/components/pages/Home.css';
 
 function Home(props) {
     return (
