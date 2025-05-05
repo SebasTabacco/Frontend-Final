@@ -13,14 +13,20 @@ function Footer() {
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <i className="bi bi-facebook"></i>
-                </a>
                 <a href="https://www.skype.com" target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-skype"></i>
                 </a>
                 <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-whatsapp"></i>
+                </a>
+                <a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-twitch"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-youtube"></i>
+                </a>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-discord"></i>
                 </a>
             </div>
             <p>&copy; 2025 Núcleo Web. Todos los derechos reservados.</p>
