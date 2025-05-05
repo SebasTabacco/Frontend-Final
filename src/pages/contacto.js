@@ -144,8 +144,8 @@ function Contacto() {
             <i className="fas fa-envelope"></i>
             <p><strong>Correos Electrónicos:</strong></p>
             <ul>
-              <li><a href="mailto:contacto@empresa.com">nucleoweb@gmail.com</a></li>
-              <li><a href="mailto:soporte@empresa.com">nucleoweb@gmail.com</a></li>
+              <li><a href="mailto:contacto@empresa.com">nucleoweb9@gmail.com</a></li>
+              <li><a href="mailto:soporte@empresa.com">nucleoweb9@gmail.com</a></li>
             </ul>
           </div>
           <div>
